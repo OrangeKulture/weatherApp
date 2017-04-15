@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Weather Application</title>
+	<meta charset="UTF-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+	<!--Loading Bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	 <!--Loading Animate CSS-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+   <!--Loading CSS-->
+  <link rel="stylesheet" href="style.css">
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Unica+One');
+  </style>
+
+  </head>
+
+
+<body>
+  <div class="container">
+    <h1 class="text-center headerText">Inte<span id="lett1">r</span>acti<span id="lett2">v</span>e Forecas<span id="lett3">t</span></h1>
+    <h5 class="text-center local">Check your local weather</h5>
+
+    <div class="metric text-center">
+      <button type="button" class="btn btn-default temp temp1">C</button>
+      <img class="icon" src="https://s25.postimg.org/d0xnsjlz3/temperature.png" alt="temperature icon">
+      <button type="button" class="btn btn-default temp temp2">F</button>
+    </div>
+
+    <div class="localContent text-center">
+      <div>
+        <h2 id="cityName">Some City, CA</h2></div>
+      <div class="properties">
+        <div class- "mainP">
+          <h3 id="main"></h3>
+          <h4 id="desc"></h4>
+        </div>
+        <div class="stats">
+          <div id="temper">
+            <h6>Temp</h6>
+            <h3 id="degree"></h3>
+          </div>
+          <div id="humi">
+            <h6>Humidity</h6>
+            <h3 id="humid"></h3>
+          </div>
+          <div id="wind">
+            <h6>Wind</h6>
+            <h3 id="knot"></h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+<!--Loading jQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!--Loading Javascript-->
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+body {
+  background-repeat: no-repeat;
+  background-position: center center fixed;
+  background-size: 100%;
+  font-family: 'Unica One', cursive;
+}
+
+.headerText {
+  font-size: 3.5em;
+}
+
+.local {
+  margin-top: 1.5em;
+  font-size: 1.5em;
+}
+
+.container {
+  background: rgba(217, 217, 217, 0.6);
+  margin-top: 2.5%;
+  border: 1px solid rgba(224, 64, 6, 0.4);
+  border-radius: 100px;
+  padding: 35px;
+  width: 50%;
+}
+
+.metric {
+  text-align: center;
+  margin-top: 2.5em;
+}
+
+.temp {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid #E04006;
+  background: none;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.temp:hover {
+  transform: scale(1.15);
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+}
+
+.localContent {
+  margin-top: 2.2em;
+}
+
+#cityName h2 {
+  font-size: 3.5em;
+}
+
+.stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.numb {
+  font-size: 4.5em;
+}
+
+#temper,
+#humi,
+#wind {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid #E04006;
+  background: none;
+  font-weight: bold;
+  float: none;
+  display: inline-block;
+  margin: 20px;
+}
+
+.stats div:hover {
+  transform: scale(1.05);
+}
+
+.stats h6 {
+  text-align: center;
+  margin-top: 20px;
+}

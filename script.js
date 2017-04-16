@@ -10,7 +10,7 @@ $(document).ready(function() {
 
       //API call
 
-      var url = 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&units=metric&APPID=10806f1d4ce199266fd576ecf86406da';
+      var url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&units=metric&APPID=10806f1d4ce199266fd576ecf86406da';
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {

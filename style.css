@@ -1,31 +1,31 @@
 body {
   background-repeat: no-repeat;
-  background-position: center center fixed;
+  background-position: center center;
   background-size: 100%;
   font-family: 'Unica One', cursive;
 }
 
-.headerText {
+.title h1 {
   font-size: 3.5em;
 }
 
-.local {
+.title h5 {
   margin-top: 1.5em;
   font-size: 1.5em;
 }
 
-.container {
-  background: rgba(217, 217, 217, 0.6);
-  margin-top: 4%;
-  border: 1px solid rgba(224, 64, 6, 0.4);
-  border-radius: 100px;
-  padding: 35px;
-  width: 50%;
+.metric {
+  margin-top: 2.5em;
 }
 
-.metric {
-  text-align: center;
-  margin-top: 2.5em;
+.metric img {
+  width: 64px;
+  height: 64px;
+}
+
+#properties h6 {
+  padding-top: 0.25em;
+  font-size: 1.2em;
 }
 
 .temp {
@@ -40,50 +40,86 @@ body {
 
 .temp:hover {
   transform: scale(1.15);
+  background: none;
 }
 
-.icon {
-  width: 64px;
-  height: 64px;
-}
-
-.localContent {
-  margin-top: 2.2em;
-}
-
-#cityName h2 {
+#cityName {
   font-size: 3.5em;
 }
 
-.stats {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* FLEX Properties */
+
+.container {
+  display: flex;
+  justify-content: center;
 }
 
-.numb {
-  font-size: 4.5em;
+.wrapper {
+  padding: 0.75em;
+  margin-top: 8em;
+  text-align: center;
+  background: rgba(217, 217, 217, 0.6);
+  border: 1px solid rgba(224, 64, 6, 0.4);
+  border-radius: 100px;
+  width: 75%;
 }
 
-#temper,
-#humi,
-#wind {
+#title {
+  display: flex;
+  flex-direction: column;
+}
+
+#metric {
+  display: flex;
+}
+
+#properties {
+  display: flex;
+  flex-direction: row;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+#properties div {
+  flex-grow: 1;
   height: 100px;
   width: 100px;
   border-radius: 50%;
   border: 2px solid #E04006;
   background: none;
   font-weight: bold;
-  float: none;
-  display: inline-block;
   margin: 20px;
 }
 
-.stats div:hover {
-  transform: scale(1.05);
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .wrapper {
+    margin-top: 1.5em;
+    width: 100%;
+  }
+  #properties h6 {
+    padding-top: 0.25em;
+    font-size: 1em;
+  }
+  #properties div {
+    flex-grow: 1;
+    height: 100px;
+    width: 100px;
+    border: none;
+    background: none;
+    font-weight: bold;
+    margin: 20px;
+  }
 }
 
-.stats h6 {
-  text-align: center;
-  margin-top: 20px;
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }

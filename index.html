@@ -21,40 +21,41 @@
 
 <body>
   <div class="container">
-    <h1 class="text-center headerText">Inte<span id="lett1">r</span>acti<span id="lett2">v</span>e Forecas<span id="lett3">t</span></h1>
-    <h5 class="text-center local">Check your local weather</h5>
+  <div class="wrapper">
 
-    <div class="metric text-center">
+    <section class="title">
+      <h1>Inte<span id="lett1">r</span>acti<span id="lett2">v</span>e Forecas<span id="lett3">t</span></h1>
+      <h5>Check your local weather</h5>
+    </section>
+
+    <div class="metric">
       <button type="button" class="btn btn-default temp temp1">C</button>
       <img class="icon" src="https://s25.postimg.org/d0xnsjlz3/temperature.png" alt="temperature icon">
       <button type="button" class="btn btn-default temp temp2">F</button>
     </div>
 
-    <div class="localContent text-center">
-      <div>
-        <h2 id="cityName">Some City, CA</h2></div>
-      <div class="properties">
-        <div class- "mainP">
-          <h3 id="main"></h3>
-          <h4 id="desc"></h4>
-        </div>
-        <div class="stats">
-          <div id="temper">
-            <h6>Temp</h6>
-            <h3 id="degree"></h3>
-          </div>
-          <div id="humi">
-            <h6>Humidity</h6>
-            <h3 id="humid"></h3>
-          </div>
-          <div id="wind">
-            <h6>Wind</h6>
-            <h3 id="knot"></h3>
-          </div>
-        </div>
-      </div>
 
+    <div class="localContent">
+      <h2 id="cityName"></h2>
+      <h4 id="desc"></h4>
     </div>
+
+
+    <section id="properties">
+      <div class="temper">
+        <h6 id="temperature">Temp</h6>
+        <h3 id="degree"></h3>
+      </div>
+      <div class="humi">
+        <h6>Humidity</h6>
+        <h3 id="humid"></h3>
+      </div>
+      <div class="wind">
+        <h6>Wind</h6>
+        <h3 id="knot"></h3>
+      </div>
+    </section>
+
 
   </div>
 

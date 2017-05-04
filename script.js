@@ -13,19 +13,19 @@ $(document).ready(function() {
         lat +
         "," +
         long +
-        "&sensor=true";
+        "&sensor=false";
 
       $.getJSON(cityInfo, function(data) {
-        var address = data.results[0].address_components[1].long_name;
+        var address = data.results[0].address_components[2].long_name;
         $("#cityName").text(address);
       });
 
       var url =
-        "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/8bfe73adbee0a652190e6c9ccd1e1d21/" +
+        "https://api.darksky.net/forecast/8bfe73adbee0a652190e6c9ccd1e1d21/" +
         lat +
         "," +
         long +
-        "?exclude=minutely,hourly,daily,alerts,flags&units=si";
+        "?exclude=minutely,hourly,daily,alerts,flags&units=si&callback=?";
 
       $.ajax({
         url: url,
@@ -36,15 +36,16 @@ $(document).ready(function() {
           var weather = data.currently.icon;
           var description = data.currently.summary;
           outDegree = data.currently.temperature;
-          var hum = data.currently.humidity * 100;
+          var hum = Math.floor(data.currently.humidity * 100);
           var winds = data.currently.windSpeed;
 
           var snow = "https://s25.postimg.org/gtlrm0qv3/snow.jpg";
           var clearDay = "https://s25.postimg.org/7s2muo3jz/clear.jpg";
           var clearNight = "https://s25.postimg.org/y35hzs3r3/sky-moon.jpg";
-          var rain = "https://s25.postimg.org/w4vkmmo73/rain.png";
+          var rain = "https://s25.postimg.org/bhnm34pvj/rain.jpg";
           var cloudyDay = "https://s25.postimg.org/fyz7zzj0f/clouds.jpg";
-          var cloudyNight = "https://s25.postimg.org/sqgnlnfun/cloudy-night.jpg";
+          var cloudyNight =
+            "https://s25.postimg.org/sqgnlnfun/cloudy-night.jpg";
           var sleet = "https://s25.postimg.org/x259anmrj/sleet.jpg";
           var wind = "https://s25.postimg.org/8yb877h8f/extreme.jpg";
           var foggy = "https://s25.postimg.org/xz3tqmltr/atmosphere.jpg";
@@ -108,4 +109,8 @@ $(document).ready(function() {
     var faren = Math.floor(outDegree * 9 / 5 + 32);
     $("#degree").text(faren + "°");
   });
+});
+
+$(".temp").mouseup(function() {
+  $(this).blur();
 });

@@ -41,11 +41,13 @@ body {
 .temp:hover {
   transform: scale(1.15);
   background: none;
+  border: 2px solid #E04006;
 }
 
 #cityName {
   font-size: 3.5em;
 }
+
 
 /* FLEX Properties */
 
@@ -55,13 +57,13 @@ body {
 }
 
 .wrapper {
-  padding: 0.75em;
-  margin-top: 8em;
+  padding: 0.55em;
+  margin-top: 7em;
   text-align: center;
-  background: rgba(217, 217, 217, 0.6);
+  background: rgba(217, 217, 217, 0.75);
   border: 1px solid rgba(224, 64, 6, 0.4);
   border-radius: 100px;
-  width: 75%;
+  width: 50%;
 }
 
 #title {
